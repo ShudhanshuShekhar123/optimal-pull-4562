@@ -1,0 +1,155 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.outerdiv-navbar {
+    /* border: 3px solid purple; */
+    background: #32aeb1;
+}
+
+.container-navbar {
+    width: 85%;
+    /* border: 3px solid black; */
+    padding: 10px 0px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-selecttag {
+    display: flex;
+    align-items: center;
+}
+
+.logo-selecttag img {
+    width: 120px;
+    height: 90px;
+    margin-right: 40px;
+    border-radius: 50%
+}
+
+
+
+.cart-signin {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    /* border: 3px solid blue; */
+    align-items: center;
+    font-size: 20px;
+    padding: 13px 0px;
+}
+
+.signup-login {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.signup-login div {
+    margin-right: 10px;
+}
+
+.icon-div-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 19px;
+}
+
+.icon-div-navbar-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    color: white;
+    font-size: 19px;
+}
+
+.icon-tag {
+    margin-right: 8px;
+    /* padding-right: 6px; */
+    /* color: white; */
+}
+
+.offer-cart {
+    padding-right: 10px;
+}
+
+.selecttag-navbar {
+    background: #32aeb1;
+    color: white;
+    padding: 10px 17px;
+    border-radius: 19px;
+    border: 2px solid white;
+}
+
+@media screen and (min-width: 300px) and (max-width: 680px) {
+    .cart-signin {
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr;
+    }
+
+    .inner-signup-login {
+        flex-direction: column;
+    }
+
+    .container-navbar {
+        padding-top: 0px;
+        gap:10px;
+    }
+
+    .signup-login {
+        margin-bottom: 5px;
+    }
+
+    .icon-div-navbar {
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+
+    .logo-selecttag img {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+        margin-left:10px;
+
+    }
+
+    .logo-selecttag {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icon-div-navbar-login {
+        font-size: 18px;
+        padding-right: 0px;
+        padding-bottom: 10px;
+    }
+
+    .selecttag-navbar {
+        background: #32aeb1;
+        color: white;
+        padding: 10px 5px;
+        border-radius: 19px;
+        border: 2px solid white;
+    }
+
+    .logo-selecttag {
+        padding-left: 10px;
+    }
+
+    .signup-login div {
+        margin-right: 0px;
+    }
+
+    .offer-cart {
+        padding-right: 0px;
+    }
+}
