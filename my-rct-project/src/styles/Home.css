@@ -1,0 +1,167 @@
+.search-container {
+    background: #FFF5F5
+}
+
+.inner-search-cntainer-div {
+    width: 60%;
+    margin: auto;
+    /* height: 200px; */
+    padding-top: 90px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input-homepage {
+    width: 50%;
+    margin-top: 15px;
+    display: flex;
+    position: relative;
+
+}
+
+.search-icon-home {
+    position: absolute;
+    top: 9px;
+    font-size: 25px;
+    right: 8px;
+    padding-right: 6px;
+}
+
+.inner_search_input_hpmepage {
+    width: 100%;
+    padding: 13px 0px 13px 14px;
+    border-radius: 18px;
+    /* border: 1px solid green; */
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.inner_search_button_homepage {
+    width: 110px;
+    padding: 10px 0px;
+    margin-top: 9px;
+    background-color: #32aeb1;
+    color: white;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.inner_product_div_homepage {
+    padding: 15px 0px 30px 0px;
+    width: 85%;
+    margin: auto;
+    display: grid;
+    /* margin-bottom: 120px;; */
+    grid-template-columns: repeat(6, 1fr);
+    /* border: 2px solid black; */
+}
+
+.inner_product_div_homepage_cards img {
+    width: 80px;
+    height: 73px;
+}
+
+.inner_product_div_homepage_cards {
+    /* border: 2px solid black; */
+    margin-right: 30px;
+}
+
+.inner_product_div_homepage_cards:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 5px 3px 14px 3px;
+    height: 134px;
+    cursor: pointer;
+}
+
+.medical_problems_div {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.medical_problems_image {
+    /* border: 2px solid black; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-top: 30px;
+    width: 200px;
+    padding: 70px 0px;
+    /* background-color: rgb(230, 246, 240); */
+}
+
+@media screen and (min-width:1001px) and (max-width:1200px) {
+
+    .medical_problems_div {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (min-width:801px) and (max-width:1000px) {
+
+    .medical_problems_div {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width:501px) and (max-width:800px) {
+
+    .medical_problems_div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width:300px) and (max-width:500px) {
+
+    .medical_problems_div {
+    /* border: 2px solid black; */
+  gap: 5px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .medical_problems_image{
+       margin: auto;
+       padding:30px 0px ;
+       /* border: 10px solid green; */
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:1000px) {
+
+    .inner_product_div_homepage {
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-rows: repeat(); */
+    }
+    .search-input-homepage{
+        /* border: 2px solid brown; */
+        width: 450px;
+      }
+}
+
+@media screen and (min-width:451px) and (max-width:599px) {
+
+    .inner_product_div_homepage {
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-rows: repeat(); */
+    }
+    .search-input-homepage{
+        /* border: 2px solid brown; */
+        width: 350px;
+      }
+}
+
+@media screen and (min-width:300px) and (max-width:450px) {
+
+    .inner_product_div_homepage {
+        grid-template-columns: repeat(1, 1fr);
+        /* grid-template-rows: repeat(); */
+    }
+  .search-input-homepage{
+    /* border: 2px solid brown; */
+    width: 250px;
+  }
+}
