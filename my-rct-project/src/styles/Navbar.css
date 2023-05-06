@@ -6,6 +6,8 @@
 .outerdiv-navbar {
     /* border: 3px solid purple; */
     background: #32aeb1;
+    /* background: #3150b6; */
+    
 }
 
 .container-navbar {
@@ -29,7 +31,8 @@
     width: 120px;
     height: 90px;
     margin-right: 40px;
-    border-radius: 50%
+    border-radius: 50%;
+    mix-blend-mode:hard-light
 }
 
 
@@ -81,6 +84,7 @@
 }
 
 .selecttag-navbar {
+    /* background: #32aeb1; */
     background: #32aeb1;
     color: white;
     padding: 10px 17px;
@@ -88,6 +92,34 @@
     border: 2px solid white;
 }
 
+.category-div-navbar {
+    /* border: 3px solid red; */
+    background: #32aeb1;
+  }
+  
+  .inner-category-div-navbar a:hover {
+    color: red;
+    cursor: pointer;
+  }
+  
+  .inner-category-div-navbar {
+    /* border: 3px solid green; */
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    /* justify-content: center; */
+    padding: 7px 0px;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    width: 85%;
+  }
+  
+  .inner-category-div-navbar-navlink {
+    text-decoration: none;
+    color: black;
+  }
 @media screen and (min-width: 300px) and (max-width: 680px) {
     .cart-signin {
         grid-template-columns: 1fr;
@@ -113,8 +145,8 @@
     }
 
     .logo-selecttag img {
-        width: 60px;
-        height: 60px;
+        width: 100px;
+        height: 80px;
         margin-right: 10px;
         margin-bottom: 10px;
         border-radius: 50%;
@@ -136,7 +168,7 @@
     .selecttag-navbar {
         background: #32aeb1;
         color: white;
-        padding: 10px 5px;
+        padding: 10px 18px;
         border-radius: 19px;
         border: 2px solid white;
     }
