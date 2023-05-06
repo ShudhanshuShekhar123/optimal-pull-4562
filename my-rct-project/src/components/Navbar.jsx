@@ -94,10 +94,10 @@ const Navbar = () => {
             <div className="category-div-navbar">
                 <div className="inner-category-div-navbar">
                     <div>
-                        <NavLink className="inner-category-div-navbar-navlink" to="">Medicine</NavLink>
+                        <NavLink className="inner-category-div-navbar-navlink" to="/medicine">Medicine</NavLink>
                     </div>
                     <div>
-                        <NavLink className="inner-category-div-navbar-navlink"  to="">Health Care</NavLink>
+                        <NavLink className="inner-category-div-navbar-navlink"  to="/healthcare">Health Care</NavLink>
                     </div>
                     <div>
                         <NavLink className="inner-category-div-navbar-navlink"  to="">Ayurvedic</NavLink>
@@ -107,6 +107,9 @@ const Navbar = () => {
                     </div>
                     <div>
                         <NavLink className="inner-category-div-navbar-navlink"  to="">Eyewear</NavLink>
+                    </div>
+                    <div>
+                        <NavLink className="inner-category-div-navbar-navlink"  to="">Homeopathy</NavLink>
                     </div>
                 </div>
                 <hr />
