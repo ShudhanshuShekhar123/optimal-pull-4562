@@ -95,6 +95,48 @@
     /* background-color: rgb(230, 246, 240); */
 }
 
+/* footer section */
+
+.outer_footer_section{
+    background-image: linear-gradient(to bottom, rgba(36, 174, 177, 0) 50%, rgba(36, 174, 177, .7) 130%), linear-gradient(to bottom, #fff, #fff);
+}
+.footer_section {
+  
+    padding: 45px 0px;
+    display: grid;
+    /* border: 2px solid red; */
+    width: 95%;
+    margin: auto;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.inner_footer_section_spans {
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* border: 2px solid green; */
+}
+
+.inner_footer_section_spans_last{
+gap: 10px;
+display: grid;
+grid-template-columns: 1fr;
+/* border: 2px solid green; */
+padding-bottom: 15px;
+}
+
+
+.inner_payment_partners{
+   /* border: 2px solid brown; */
+   padding: 40px 0px;
+   display: grid;
+   grid-template-columns: repeat(7,1fr);
+   width: 85%;
+   gap: 15px;
+   margin: auto;
+
+
+}
 @media screen and (min-width:1001px) and (max-width:1200px) {
 
     .medical_problems_div {
@@ -106,6 +148,40 @@
 
     .medical_problems_div {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+  
+}
+
+
+@media screen and (min-width:601px) and (max-width:1100px) {
+
+    .footer_section{
+        grid-template-columns: repeat(2,1fr);
+        gap: 35px;
+        margin: auto;
+    }
+
+    .inner_footer_section_spans_last{
+        /* margin: auto; */
+        position: relative;
+        /* border: 2px solid green; */
+        left: 54%;
+    }
+}
+
+
+@media screen and (min-width:300px) and (max-width:600px) {
+
+    .footer_section{
+        grid-template-columns: repeat(1,1fr);
+        gap: 30px;
+     
+    }
+
+    .inner_footer_section_spans_last{
+        margin: auto;
+        border: 2px solid green;
     }
 }
 
@@ -119,14 +195,15 @@
 @media screen and (min-width:300px) and (max-width:500px) {
 
     .medical_problems_div {
-    /* border: 2px solid black; */
-  gap: 5px;
+        /* border: 2px solid black; */
+        gap: 5px;
         grid-template-columns: repeat(1, 1fr);
     }
-    .medical_problems_image{
-       margin: auto;
-       padding:30px 0px ;
-       /* border: 10px solid green; */
+
+    .medical_problems_image {
+        margin: auto;
+        padding: 30px 0px;
+        /* border: 10px solid green; */
     }
 }
 
@@ -136,10 +213,11 @@
         grid-template-columns: repeat(3, 1fr);
         /* grid-template-rows: repeat(); */
     }
-    .search-input-homepage{
+
+    .search-input-homepage {
         /* border: 2px solid brown; */
         width: 450px;
-      }
+    }
 }
 
 @media screen and (min-width:451px) and (max-width:599px) {
@@ -148,10 +226,11 @@
         grid-template-columns: repeat(2, 1fr);
         /* grid-template-rows: repeat(); */
     }
-    .search-input-homepage{
+
+    .search-input-homepage {
         /* border: 2px solid brown; */
         width: 350px;
-      }
+    }
 }
 
 @media screen and (min-width:300px) and (max-width:450px) {
@@ -160,8 +239,47 @@
         grid-template-columns: repeat(1, 1fr);
         /* grid-template-rows: repeat(); */
     }
-  .search-input-homepage{
-    /* border: 2px solid brown; */
-    width: 250px;
+
+    .search-input-homepage {
+        /* border: 2px solid brown; */
+        width: 250px;
+    }
+}
+
+@media screen and (min-width : 800px) and (max-width:1100px) {
+
+    .inner_payment_partners{
+          grid-template-columns: repeat(4,1fr);
+          
+    }
+    .inner_payment_partners img{
+        padding-bottom: 25px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width : 601px) and (max-width:800px) {
+
+    .inner_payment_partners{
+        grid-template-columns: repeat(2,1fr);
+        
+  }
+  .inner_payment_partners img{
+    padding-bottom: 25px;
+      margin: auto;
+  }
+
+}
+
+@media screen and (min-width : 300px) and (max-width:600px) {
+
+    .inner_payment_partners{
+        grid-template-columns: repeat(1,1fr);
+        
+  }
+  .inner_payment_partners img{
+      padding-bottom: 15px;
+      
+      margin: auto;
   }
 }

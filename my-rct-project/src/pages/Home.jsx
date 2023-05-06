@@ -7,7 +7,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 const Home = () => {
 
-    let ref1 = useRef();
+    let ref1 = useRef(null);
 
 
     // const responsive = {
@@ -78,17 +78,14 @@ const Home = () => {
         ];
 
         let i = 0;
-        let intervalid = setInterval(() => {
-            ref1.current.placeholder = placeholders[i];
+       setInterval(() => {
+            ref1.current = placeholders[i];
             i++;
             if (i === 4) {
                 i = 0;
             }
 
-            if (ref1.current.placeholder === "search here") {
-                clearInterval(intervalid);
-            }
-        }, 1500);
+        }, 1000);
     }, []);
 
 
@@ -102,7 +99,7 @@ const Home = () => {
                     <div className="search-input-homepage">
                         <CiSearch className="search-icon-home" />
                         <input className="inner_search_input_hpmepage" ref={ref1}
-                            placeholder={ref1.current || "search here . . ."} type="text" />
+                            placeholder={ref1.current || "Search products here . . ."} type="text" />
                     </div>
                     <button className="inner_search_button_homepage" >Search</button>
                 </div>
@@ -198,12 +195,12 @@ const Home = () => {
                 </div>
             </div>
             <div>
-                <div style={{ width: "80%", margin: "auto", padding: "70px 0px", fontSize: "18px", color: "black" }}>
+                <div style={{ width: "50%", margin: "auto", padding: "70px 0px", fontSize: "18px", color: "black" }}>
                     <p><h1 style={{ color: "teal" }}> MediZone</h1> is one of India’s most trusted pharmacies, dispensing quality medicines at reasonable prices to over 7 million happy customers – PAN India.</p>
                 </div>
             </div>
             <div>
-                <div style={{ backgroundColor:"rgb(230, 246, 240)", display:"grid",gridTemplateColumns:"repeat(3,1fr)",padding:"80px 0px"}}>
+                <div style={{ backgroundColor: "rgb(230, 246, 240)", display: "grid", gridTemplateColumns: "repeat(3,1fr)", padding: "80px 0px" }}>
                     <div>
                         <h1>1000+</h1> Offline Stores
                     </div>
@@ -212,6 +209,65 @@ const Home = () => {
                     </div>
                     <div>
                         <h1>7M+</h1> Happy Customers
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <hr />
+            <div>
+                <div className="outer_footer_section">
+                    <div className="footer_section" >
+                        <div className="inner_footer_section_spans">
+                            <span style={{ fontWeight: "500" }}>COMPANY</span>
+                            <span>About Medizone</span>
+                            <span>Customers Speak</span>
+                            <span>In the News</span>
+                            <span>Career</span>
+                            <span>Contact</span>
+                        </div>
+                        <div className="inner_footer_section_spans">
+                            <span style={{ fontWeight: "500" }} >OUR POLICIES</span>
+                            <span>Terms and Conditions</span>
+                            <span>Privacy Policy</span>
+                            <span>Fees and Payments Policy</span>
+                            <span>Shipping and Delivery Policy</span>
+                            <span>Return, Refund and Cancellation Policy</span>
+                        </div>
+                        <div className="inner_footer_section_spans">
+                            <span style={{ fontWeight: "500" }}>SHOPPING</span>
+                            <span>Browse by A-Z</span>
+                            <span>Browse by Manufacturers</span>
+                            <span>Health Articles</span>
+                            <span>Offers / Coupons</span>
+                            <span>FAQs</span>
+                        </div>
+                        <div className="inner_footer_section_spans">
+                            <span style={{ fontWeight: "500" }}>SOCIAL</span>
+                            <span>Patients Alike</span>
+                            <span>Facebook</span>
+                            <span>Twitter</span>
+                            <span>LinkedIn</span>
+                            <span>Youtube</span>
+                        </div>
+                        <div className="inner_footer_section_spans_last">
+                            <span style={{ fontWeight: "500" }}>SUBSCRIBE TO OUR NEWSLETTER</span>
+                            <span>Get a free subscription to our health and fitness tip and stay tuned to our latest offers</span>
+                            <input style={{ width: "80%", padding: "14px 10px", margin: "auto", outline: "none", border: "0px" }} type="text" placeholder="Enter your email address" />
+                        </div>
+                    </div>
+                    <div className="payment_partners">
+                        <div className="inner_payment_partners">
+                            <img src="https://www.netmeds.com/assets/global/images/footer-payment-icon/google-pay.svg" alt="" />
+                            <img src="https://www.netmeds.com/assets/global/images/footer-payment-icon/phonepe.svg" alt="" />
+                            <img src="https://www.netmeds.com/assets/global/images/footer-payment-icon/paytm.svg" alt="" />
+                            <img src="https://www.netmeds.com/assets/global/images/footer-payment-icon/simpl.svg" alt="" />
+                            <img src="https://www.netmeds.com/assets/global/images/footer-payment-icon/rupay.svg" alt="" />
+                            <img src="https://www.netmeds.com/assets/global/images/footer-payment-icon/visa.svg" alt="" />
+                            <img src="https://www.netmeds.com/assets/global/images/footer-payment-icon/mastercard.svg" alt="" />
+
+                        </div>
+
+                        <p style={{ padding: "20px 0px" }}>Copyright© 2023. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
