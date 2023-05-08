@@ -12,8 +12,8 @@ import {Datacontext} from "../context/Datacontext"
 import { useContext } from "react"
 import { useNavigate } from "react-router-dom"
 const Navbar = () => {
-    const { isAuth, setIsAuth, login, logout } = useContext(Authcontext)
-    const {setdata} = useContext(Datacontext)
+    const { isAuth, setIsAuth, login, logout,name ,setname} = useContext(Authcontext)
+    const {setdata,data} = useContext(Datacontext)
 
 
     const navigate = useNavigate()
@@ -22,6 +22,7 @@ const Navbar = () => {
         if(isAuth){
             logout()
             setdata([])
+            setname(null)
             alert("logout successful")
             navigate("/")
         }else{
@@ -98,7 +99,7 @@ const Navbar = () => {
                                     textAlign: "center"
                                 }}
                             >
-                                <p> </p>
+                                <p style={{fontWeight:"600"}}> {name !==null ? `Welcome,${name}` : null}</p>
                             </div>
                         </div>
 
@@ -108,7 +109,10 @@ const Navbar = () => {
                             Offers
                         </div>
                         <NavLink to="/healthcare/cart" style={{ textDecoration: "none" }}>
-                            <div className="icon-div-navbar">
+                       
+                            <div style={{position:"relative"}} className="icon-div-navbar">
+                            <p style={{fontSize:"22px",fontWeight:"900",color:"black", position:"absolute",left:"110px",bottom:"8px"}}>
+                                {data.length === 0 ? null : data.length}</p>
                                 {" "}
                                 <FaLuggageCart className="icon-tag" />
                                 Cart

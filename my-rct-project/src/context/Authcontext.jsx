@@ -7,7 +7,7 @@ const Authcontextprovider = (props) => {
     // const navigate = useNavigate()
 
     const [isAuth, setIsAuth] = useState(false)
-
+    const [name,setname] = useState(null)
     const login = () => {
         setIsAuth(true)
         // navigate("/healthcare/cart")
@@ -22,7 +22,7 @@ const Authcontextprovider = (props) => {
     }
 
     return (
-        <Authcontext.Provider value={{ isAuth, login, logout }} >
+        <Authcontext.Provider value={{ isAuth, login, logout, name,setname }} >
             {props.children}
         </Authcontext.Provider>
     )
