@@ -1,0 +1,24 @@
+.health_card_container {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid green; */
+    justify-content: space-between;
+
+ /* width: 90%; */
+ /* height: 216px; */
+}
+.health_card_button{
+    padding:10px 16px;
+     border-radius:16px;
+     color:white;
+      background-color:#32aeb1;
+      margin-bottom:9px;
+      font-weight: 600;
+      border: 0px;
+}
+.health_card_button:hover{
+    color: navy;
+    cursor: pointer;
+    scale:1.1;
+}
