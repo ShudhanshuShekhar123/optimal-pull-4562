@@ -1,6 +1,6 @@
 // CiSearch
 import "../styles/Home.css"
-
+import Footer from "./Footer";
 import { useEffect, useRef } from 'react';
 import { CiSearch } from 'react-icons/ci';
 import Carousel from "react-multi-carousel";
@@ -8,25 +8,6 @@ import "react-multi-carousel/lib/styles.css";
 const Home = () => {
 
     let ref1 = useRef(null);
-
-
-    // const responsive = {
-    //     desktop: {
-    //         breakpoint: { max: 3000, min: 1024 },
-    //         items: 5,
-    //         partialVisibilityGutter: 40 // this is needed to tell the amount of px that should be visible.
-    //     },
-    //     tablet: {
-    //         breakpoint: { max: 1100, min: 800 },
-    //         items: 4,
-    //         partialVisibilityGutter: 30 // this is needed to tell the amount of px that should be visible.
-    //     },
-    //     mobile: {
-    //         breakpoint: { max: 800, min: 0 },
-    //         items: 3,
-    //         partialVisibilityGutter: 30 // this is needed to tell the amount of px that should be visible.
-    //     }
-    // }
 
     const responsive = {
         superLargeDesktop: {
@@ -78,7 +59,7 @@ const Home = () => {
         ];
 
         let i = 0;
-       setInterval(() => {
+        setInterval(() => {
             ref1.current = placeholders[i];
             i++;
             if (i === 4) {
@@ -161,7 +142,7 @@ const Home = () => {
                         {
                             data.map((item) => {
                                 return (
-                                    <div>
+                                    <div key={Math.random()}>
                                         <img width="186px" height="180px" src={item} alt="" />
                                     </div>
                                 )
@@ -196,7 +177,7 @@ const Home = () => {
             </div>
             <div>
                 <div style={{ width: "50%", margin: "auto", padding: "70px 0px", fontSize: "18px", color: "black" }}>
-                    <p><h1 style={{ color: "teal" }}> MediZone</h1> is one of India’s most trusted pharmacies, dispensing quality medicines at reasonable prices to over 7 million happy customers – PAN India.</p>
+                    <h1 style={{ color: "teal" }}> MediZone</h1><p> is one of India’s most trusted pharmacies, dispensing quality medicines at reasonable prices to over 7 million happy customers – PAN India.</p>
                 </div>
             </div>
             <div>
@@ -214,7 +195,7 @@ const Home = () => {
             </div>
             <hr />
             <hr />
-            <div>
+            {/* <div>
                 <div className="outer_footer_section">
                     <div className="footer_section" >
                         <div className="inner_footer_section_spans">
@@ -270,7 +251,8 @@ const Home = () => {
                         <p style={{ padding: "20px 0px" }}>Copyright© 2023. All Rights Reserved.</p>
                     </div>
                 </div>
-            </div>
+            </div> */}
+            <Footer />
         </div>
     )
 

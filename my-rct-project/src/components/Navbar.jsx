@@ -7,9 +7,41 @@ import { MdLocalOffer } from "react-icons/md";
 import { FaLuggageCart } from "react-icons/fa";
 
 import { NavLink } from "react-router-dom";
-
-
+import { Authcontext } from "../context/Authcontext"
+import {Datacontext} from "../context/Datacontext"
+import { useContext } from "react"
+import { useNavigate } from "react-router-dom"
 const Navbar = () => {
+    const { isAuth, setIsAuth, login, logout } = useContext(Authcontext)
+    const {setdata} = useContext(Datacontext)
+
+
+    const navigate = useNavigate()
+
+    const handlelogout=()=>{
+        if(isAuth){
+            logout()
+            setdata([])
+            alert("logout successful")
+            navigate("/")
+        }else{
+            alert("Please login first")
+        }
+   
+    }
+
+    const handlelogin=()=>{
+        if(!isAuth){
+            navigate("/login")
+        }
+        
+        if(isAuth)
+        {
+            alert("You are already logged in")
+            // navigate("/healthcare")
+        }
+    }
+
     return (
         <>
             <div className="outerdiv-navbar">
@@ -38,29 +70,24 @@ const Navbar = () => {
 
                         <div className="signup-login">
                             <div className="inner-signup-login" style={{ display: "flex" }}>
-                                <NavLink to="/login" style={{ textDecoration: "none" }}>
-                                    <div className="icon-div-navbar-login">
+                               
+                                    <div onClick={handlelogin}  className="icon-div-navbar-login">
                                         {" "}
 
                                         <RiContactsFill style={{ marginRight: "7px" }} />
                                         Login
 
                                     </div>
-                                </NavLink>
-
-
-                                <NavLink to="/signup" style={{ textDecoration: "none" }}>
-                                    <div className="icon-div-navbar">
+                                
+                                    <div onClick={handlelogout} className="icon-div-navbar logout-navbar">
                                         {" "}
                                         <IoMdContact
                                             style={{
                                                 marginRight: "7px"
                                             }}
                                         />
-                                        Signup
-                                    </div>
-                                </NavLink>
-
+                                        Logout
+                                    </div>         
                             </div>
                             <div
                                 style={{
@@ -80,7 +107,7 @@ const Navbar = () => {
                             <MdLocalOffer className="icon-tag" />
                             Offers
                         </div>
-                        <NavLink to="/cart" style={{ textDecoration: "none" }}>
+                        <NavLink to="/healthcare/cart" style={{ textDecoration: "none" }}>
                             <div className="icon-div-navbar">
                                 {" "}
                                 <FaLuggageCart className="icon-tag" />
