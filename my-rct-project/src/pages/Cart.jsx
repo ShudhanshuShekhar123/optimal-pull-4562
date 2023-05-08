@@ -65,7 +65,7 @@ const Cart = () => {
 
     return (
         <div style={{ position: "relative" }}>
-            <div style={{ width: "70%", textAlign: "start", top: "20px", position: "absolute", left: "18%" }}>
+            <div style={{ width: "45%",  textAlign: "start", top: "20px", position: "absolute", left: "25%" }}>
                 <h2>Shopping Cart</h2>
                 <h3>You have <span style={{color:"red"}}>{data.length}</span> items in your cart</h3>
             </div>
@@ -73,13 +73,13 @@ const Cart = () => {
                 data.length === 0 ? <div style={{ display:"flex",alignItems:"center",justifyContent:"center",borderRadius:"25px", width: "70%", position: "absolute", top: "100px", left: "18%", boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px", height: "320px", }} ><h1>The cart is Empty</h1></div>
                     :
 
-                    <div style={{ width: "70%", position: "absolute", top: "100px", left: "18%" }}>
+                    <div style={{ width: "45%", position: "absolute", top: "90px", left: "25%" }}>
                         <div style={{ padding: "10px 0px", display: "grid", gridTemplateColumns: "repeat(5,1fr" }}>
-                            <p>Item</p>
-                            <p>Price</p>
-                            <p>Quantity</p>
-                            <p>Subtotal</p>
-                            <p>Remove</p>
+                            <p>ITEM</p>
+                            <p>NAME</p>
+                            <p>QUANTITY</p>
+                            <p>SUBTOTAL</p>
+                            <p>REMOVE</p>
                         </div>
                         {/* <hr /> */}
                         <div>
